@@ -15,11 +15,9 @@ tags:
   - Rehabilitation
   - Statistical Analysis
 ---
-
-An overview of my PhD research exploring how machine learning can personalize motor skill training to improve outcomes. I investigated two key challenges: (1) tailoring practice schedules to individual learners, and (2) optimizing prosthetic control to explore performance and human agency in human-machine interaction.
+An overview of my first PhD study exploring how machine learning can personalize motor skill training to improve outcomes. I investigated how to tailor practice schedules to individual learners by modulating task difficulty.
 
 ---
-
 ## The Challenge
 
 Every day, millions of people work to master physical skills — stroke survivors relearning to write, athletes perfecting their technique, surgeons training for precision procedures. Yet traditional training follows a **one-size-fits-all approach** that ignores a fundamental truth: *everyone learns differently*.
@@ -38,7 +36,7 @@ My team and I designed a controlled study where participants learned to trace cu
 
 By varying the channel width, we controlled difficulty: *narrow channels = harder, wide channels = easier*. Instead of following a fixed training sequence, an **AI algorithm decided which difficulty to present next**, based on each learner's real-time performance.
 
-![Experiment setup](/assets/img/experiment_1_black_white.png)
+![Experiment setup](/assets/images/experiment1.png)
 *Simplified illustration of the experiment setup, with an infrared marker on a stick tracing paths inside a channel whose width was changed dynamically by the algorithm.*
 
 ### The Machine Learning Strategy
@@ -81,9 +79,9 @@ Our AI did not just help people complete the task — it helped them develop *hi
 
 ## The Takeaway
 
-Traditional motor learning often treated everyone the same. Human experts could adapt exercises, but only for a small number of people at a time. With AI, this kind of personalized support becomes accessible to many more learners.
+With traditional motor learning, human experts may adapt exercises, but only for a small number of people at a time. With AI, this kind of personalized support becomes accessible to many more learners.
 
-One promising direction: combining the expertise of a coach with the reliability of technology by allowing the expert to guide the AI's adaptations — for example, using *ontologies* to encode expert knowledge about skill progression, which the AI can leverage to make more informed decisions.
+One promising direction for more complex movements e.g. sports: combining the expertise of a coach with the reliability of technology by allowing the expert to guide the AI's adaptations — for example, using *ontologies* to encode expert knowledge about skill progression, which the AI can leverage to make more informed decisions.
 
 ---
 

@@ -2,7 +2,7 @@ remote_theme: mmistakes/minimal-mistakes
 
 include:
   - _pages
-  
+
 plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
@@ -27,3 +27,14 @@ defaults:
     values:
       layout: single
 
+atom_feeds: false
+feed:
+  disable: true
+
+# Remove follow buttons entirely
+author:
+  name: "Vaynee Sungeelee"
+  links: []
+  bio: "Behavioral Researcher + Data Scientist"
+  location: "Paris, France"
+  avatar: "/assets/images/profile.png"

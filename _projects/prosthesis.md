@@ -19,6 +19,9 @@ tags:
 [View Code](https://github.com/vayneeS/prosthesis-strategies-with-ml){: .btn .btn--inverse target="_blank"}
 
 ---
+The second study in my PhD focused on optimizing prosthetic control to explore performance and human agency in human-machine interaction.
+
+---
 
 ## The Problem
 
@@ -80,18 +83,18 @@ I designed and implemented a data pipeline to turn raw, noisy sensor signals int
 ## Key Results
 
 ### 1. Adaptive training reduces time-to-competency
-
-![Learning rates by strategy](../assets/images/Learning_rates_by_strategy.png)
+<!-- 
+![Learning rates by strategy](../assets/images/Learning_rates_by_strategy.png) -->
 *Users exposed to adaptive gesture selection improved significantly faster than those using random or self-directed practice. In practical terms: the adaptive system increases learning speed.*
 
 ### 2. Faster learning — without sacrificing final performance
 
-![Accuracy across trials](../assets/images/accuracy_across_trials_by_strategy.png)
+<!-- ![Accuracy across trials](../assets/images/accuracy_across_trials_by_strategy.png) -->
 *All groups reached similar peak accuracy by the end of training. The difference lies in speed: users trained with the adaptive strategy achieved proficiency earlier — an efficiency gain with no trade-off in quality.*
 
 ### 3. Stronger skill transfer and system understanding
 
-![Test accuracy](../assets/images/TPR.png)
+<!-- ![Test accuracy](../assets/images/TPR.png) -->
 *When tested on new movement sequences, users trained using the adaptive strategy performed significantly better than users of the user-choice strategy — indicating deeper skill acquisition and better generalization.*
 
 ---
