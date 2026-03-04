@@ -13,8 +13,6 @@ include:
 plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
-  - jekyll-sitemap
-  - jekyll-feed
 
 # Your site info
 title: Vaynee Sungeelee
