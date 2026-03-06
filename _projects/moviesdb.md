@@ -1,13 +1,18 @@
 ---
 layout: single
 title: "Movie database - IMDb Data Engineering & Analytics (ongoing project)"
-excerpt: "A full data pipeline from raw IMDb files to an interactive graph exploration app."
+excerpt: ""
 header:
   teaser: /assets/images/marvel_teaser.jpg
   overlay_color: "#dde3ea"
-toc: true
-toc_label: "Contents"
+# toc: true
+# toc_label: "Contents"
+classes: wide project-page
+
 ---
+<div class="project-content" markdown="1">
+
+*This project is a collaborative work with [Tarik Anouar](https://fr.linkedin.com/in/anouartarik), a data analyst, mentor, and educator.*
 
 <p class="notice--info">
   <strong>Stack:</strong> Python · MySQL · Docker · Neo4j · Streamlit · SQL
@@ -19,7 +24,7 @@ toc_label: "Contents"
 ---
 ## Overview
 
-This project is a collaborative work with [Tarik Anouar](https://fr.linkedin.com/in/anouartarik), a data analyst, mentor, and educator. This project explores how raw public data can be transformed into a structured analytical resource using modern data engineering practices. Using the IMDb open datasets as a source, I built an end-to-end data pipeline that ingests, cleans, and loads the data into a relational database designed for efficient querying. The curated dataset is then exposed through an interactive graph interface, enabling exploration of relationships between movies, actors, and characters.
+ This project explores how raw public data can be transformed into a structured analytical resource using modern data engineering practices. Using the IMDb open datasets as a source, I built an end-to-end data pipeline that ingests, cleans, and loads the data into a relational database designed for efficient querying. The curated dataset is then exposed through an interactive graph interface, enabling exploration of relationships between movies, actors, and characters.
 
 The pipeline runs end-to-end: raw TSV files → relational database → graph database → Streamlit UI.
 
@@ -75,6 +80,8 @@ The SQL layer handles complex joins, aggregations, franchise filtering, and clea
 ---
 
 ## Future Improvements
+
+**More on this project coming soon ...**
 
 - **Marvel title extraction** - scrape the Marvel wiki to build a complete title list and join with the Movies table for precise franchise filtering
 

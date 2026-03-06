@@ -1,20 +1,21 @@
 ---
 layout: single
 title: "Real-time Eye-tracking for Search Engine Optimization"
-excerpt: "A proof of concept search engine that uses eye tracking to implicitly refine user queries — without requiring any explicit user input."
+excerpt: ""
 header:
   overlay_color: "#dde3ea"
-  overlay_filter: 0.6
-toc: true
-toc_label: "Contents"
+
 author_profile: false
-tags:
-  - Eye Tracking
-  - Information Retrieval
-  - HCI
-  - Java
-  - User Study
+classes: wide project-page
+
 ---
+<div class="project-content" markdown="1">
+
+*This research was conducted as part of my Master's degree (M1 internship) at LIG lab (Université Grenoble Alpes)*
+
+--- 
+
+
 
 ## The Problem
 
@@ -85,7 +86,7 @@ The TIME collection covers historical events only, which reduced ecological vali
 
 ---
 
-## Conclusions
+## Takeaways
 
 The project demonstrated that eye gaze enhanced relevance feedback is technically feasible and shows promising results — consistent with prior work using a professional-grade eye tracker (Tobii Pro X3-120). Extrapolating from device performance ratios, a higher-end tracker would be expected to achieve approximately 87% correct word detection, compared to 57% with the consumer device used here.
 
@@ -96,3 +97,5 @@ The modular architecture is designed to be extended — future work could integr
 [Proof of concept and evaluation of eye gaze enhanced relevance feedback in ecological context](https://www.irit.fr/CIRCLE/wp-content/uploads/2020/06/CIRCLE20_04.pdf)
 
 *Published at CIRCLE 2020. Co-authored with Francis Jambon and Philippe Mulhem, Université Grenoble Alpes.*
+
+</div>

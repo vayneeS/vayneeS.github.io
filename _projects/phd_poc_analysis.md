@@ -1,19 +1,17 @@
 ---
 layout: single
 title: "Personalizing Motor Learning with Machine Learning"
-excerpt: "How a multi-armed bandit algorithm can adapt motor skill training in real time — producing smoother, more expert-like movements than random practice."
+excerpt: ""
 header:
   overlay_color: "#dde3ea"
-  toc: true
-  toc_label: "Contents"
-tags:
-  - Python
-  - Reinforcement Learning
-  - HCI
-  - Rehabilitation
-  - Statistical Analysis
+  # toc: true
+  # toc_label: "Contents"
+
+classes: wide project-page
+
 ---
-An overview of my first PhD study, supervised by [Baptiste Caramiaux](https://baptistecaramiaux.com/). I explored how machine learning can personalize motor skill training to improve outcomes, in particular, how to tailor practice schedules to individual learners.
+<div class="project-content" markdown="1">
+*An overview of my first PhD study, supervised by [Baptiste Caramiaux](https://baptistecaramiaux.com/). I explored how machine learning can personalize motor skill training to improve outcomes, in particular, how to tailor practice schedules to individual learners.*
 
 ---
 ## The Challenge
@@ -34,8 +32,13 @@ My team and I designed a controlled study where participants learned to trace cu
 
 By varying the channel width, we controlled difficulty: *narrow channels = harder, wide channels = easier*. Instead of following a fixed training sequence, an **Machine Learning algorithm decided which difficulty to present next**, based on each learner's real-time performance.
 
-![Experiment setup](/assets/images/experiment1.png)
-*Simplified illustration of the experiment setup, with an infrared marker on a stick tracing paths inside a channel whose width was changed dynamically by the algorithm.*
+<figure style="width: 50%; margin: 0 auto;">
+ <img src="/assets/images/experiment1.png" alt="Experiment setup">
+  <figcaption>Illustration of the experiment setup</figcaption>
+</figure>
+
+
+___
 
 ### The Machine Learning Strategy
 
@@ -79,7 +82,7 @@ Our AI did not just help people complete the task — it helped them develop *hi
 
 With traditional motor learning, human experts may adapt exercises, but only for a small number of people at a time. With AI, this kind of personalized support becomes accessible to many more learners.
 
-One promising direction for more complex movements e.g. sports: combining the expertise of a coach with the reliability of technology by allowing the expert to guide the AI's adaptations — for example, using *ontologies* to encode expert knowledge about skill progression, which the AI can leverage to make more informed decisions.
+One promising direction for more complex movements e.g. sports: combining the expertise of a coach with the reliability of technology by allowing the expert to guide the AI's adaptations — for example, using ontologies to encode expert knowledge about skill progression, which the AI can leverage to make more informed decisions.
 
 ---
 
@@ -89,3 +92,4 @@ One promising direction for more complex movements e.g. sports: combining the ex
 [Interactive curriculum learning increases and homogenizes motor smoothness](https://www.nature.com/articles/s41598-024-53253-3)
 
 *Published in Scientific Reports 2024. Co-authored with Baptiste Caramiaux, Antoine Loriette and Olivier Sigaud.*
+</div>

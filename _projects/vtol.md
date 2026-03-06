@@ -1,17 +1,15 @@
 ---
 layout: single
 title: "3D Flight Summaries"
-excerpt: "Automatically generating cinematic highlight videos of electric aircraft trips using virtual camera control and optimization."
+excerpt: ""
 header:
   teaser: /assets/images/flight_teaser.png
   overlay_color: "#dde3ea"
-tags:
-  - 3D Visualization
-  - Optimization
-  - Urban Mobility
----
+classes: wide project-page
 
-*Developed as part of the Uber-X Chair for Integrated Urban Mobility.*
+---
+<div class="project-content" markdown="1">
+*Developed as part of my Master's degree (M2 internship) at LIX lab (École Polytechnique), in partnership with the Uber-X Chair for Integrated Urban Mobility.*
 
 ---
 
@@ -50,3 +48,5 @@ Once highlights are chosen, the system acts as a camera operator. It follows fil
 
 ![Experiment setup](/assets/images/flight_trajectories.png)
 *Trajectory simulation of a VTOL, different colors on the curve show more salient parts of the trajectory, computed using criteria such as interesting viewpoints and cinematographically sound shots*
+
+</div>

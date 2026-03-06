@@ -1,23 +1,18 @@
 ---
 layout: single
 title: "Adaptive Training for Prosthetic Control"
-excerpt: "Using adaptive algorithms to personalize motor learning and improve user outcomes — comparative user study across 50+ participants."
+excerpt: ""
 header:
   teaser: /assets/images/prosthesis_hand.JPG
   overlay_color: "#dde3ea"
-toc: true
-toc_label: "Contents"
-tags:
-  - Python
-  - Machine Learning
-  - HCI
-  - Statistical Analysis
-  - Behavioral Research
+# toc: true
+# toc_label: "Contents"
+classes: wide project-page
+
 
 ---
-The second study in my PhD focused on optimizing prosthetic control to explore performance and human agency in human-machine interaction.
-
----
+<div class="project-content" markdown="1">
+*The second study in my PhD focused on optimizing prosthetic control to explore performance and human agency in human-machine interaction.*
 
 [View Code](https://github.com/vayneeS/prosthesis-strategies-with-ml)
 
@@ -39,8 +34,10 @@ To test the adaptive training strategy, I ran a user study comparing it to two o
 - **User-Choice** — users select gestures based on perceived difficulty
 - **Adaptive** — selects gestures based on classifier performance, focusing practice where it matters most
 
-![Experiment setup](/assets/images/experiment.png)
-*Participants wore a Myo armband and performed gestures following one of three training strategies.*
+<figure style="width: 50%; margin: 0 auto;">
+ <img src="/assets/images/experiment.png" alt="Experiment setup">
+  <figcaption>Participants wore a Myo armband and performed gestures following one of three training strategies</figcaption>
+</figure>
 
 ---
 
@@ -130,3 +127,5 @@ The adaptive strategy is simple: select gestures with lowest classifier separabi
 [Comparing Teaching Strategies of a Machine Learning-based Prosthetic Arm — HAL Archive](https://amu.hal.science/ISIR_ACIDE/hal-04527854v1)
 
 *Published at IUI 2024. Co-authored with Baptiste Caramiaux, [Nathanaël Jarrassé](https://www.n-jarrasse.fr/), [Téo Sanchez](https://teo-sanchez.github.io/).*
+
+</div>

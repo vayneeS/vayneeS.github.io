@@ -1,20 +1,15 @@
 ---
 layout: single
-title: "Transfer Learning — Group Research Project"
-excerpt: "Investigating how domain similarity, data requirements, model size, and robustness are affected by transfer learning across three architectures and multiple datasets."
+title: "Transfer Learning — Group Project"
+excerpt: ""
 header:
   overlay_color: "#dde3ea"
-  overlay_filter: 0.6
-toc: true
-toc_label: "Contents"
+
 author_profile: false
-tags:
-  - Deep Learning
-  - Transfer Learning
-  - Python
-  - PyTorch
-  - Computer Vision
+classes: wide project-page
+
 ---
+<div class="project-content" markdown="1">
 
 *Group project completed during the Neuromatch Deep Learning Academy bootcamp.*
 
@@ -79,3 +74,4 @@ This project investigated four questions about transfer learning — a technique
 | Robustness | TL excels on clean data; scratch + dropout is more noise-robust |
 
 Transfer learning is most effective when the source and target domains are similar, the training budget is limited, and the test distribution is clean. 
+</div>
