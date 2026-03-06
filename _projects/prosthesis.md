@@ -13,12 +13,13 @@ tags:
   - HCI
   - Statistical Analysis
   - Behavioral Research
----
-
-[View Code](https://github.com/vayneeS/prosthesis-strategies-with-ml)
 
 ---
 The second study in my PhD focused on optimizing prosthetic control to explore performance and human agency in human-machine interaction.
+
+---
+
+[View Code](https://github.com/vayneeS/prosthesis-strategies-with-ml)
 
 ---
 
@@ -116,7 +117,7 @@ The adaptive strategy is simple: select gestures with lowest classifier separabi
 
 ## Recommendations
 
-**For product teams:** Make adaptive training the default onboarding path. Use random/user-choice only as fallback options for users who prefer more control.
+**For product teams:** Make adaptive training the default onboarding path. Use random/user-choice only as second option for users who already have a clear understanding of how the system works or for those who prefer more control.
 
 **For UX designers:** Insist on the logic behind gesture selection — show users why they're practicing specific movements. This transparency builds trust and strengthens mental models.
 
@@ -127,3 +128,5 @@ The adaptive strategy is simple: select gestures with lowest classifier separabi
 ## Reference
 
 [Comparing Teaching Strategies of a Machine Learning-based Prosthetic Arm — HAL Archive](https://amu.hal.science/ISIR_ACIDE/hal-04527854v1)
+
+*Published at IUI 2024. Co-authored with Baptiste Caramiaux, [Nathanaël Jarrassé](https://www.n-jarrasse.fr/), [Téo Sanchez](https://teo-sanchez.github.io/).*

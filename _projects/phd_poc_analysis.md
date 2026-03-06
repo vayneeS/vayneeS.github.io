@@ -3,7 +3,6 @@ layout: single
 title: "Personalizing Motor Learning with Machine Learning"
 excerpt: "How a multi-armed bandit algorithm can adapt motor skill training in real time — producing smoother, more expert-like movements than random practice."
 header:
-  teaser: /assets/images/experiment1.png
   overlay_color: "#dde3ea"
   toc: true
   toc_label: "Contents"
@@ -14,7 +13,7 @@ tags:
   - Rehabilitation
   - Statistical Analysis
 ---
-An overview of my first PhD study exploring how machine learning can personalize motor skill training to improve outcomes. I investigated how to tailor practice schedules to individual learners by modulating task difficulty.
+An overview of my first PhD study, supervised by [Baptiste Caramiaux](https://baptistecaramiaux.com/). I explored how machine learning can personalize motor skill training to improve outcomes, in particular, how to tailor practice schedules to individual learners.
 
 ---
 ## The Challenge
@@ -88,3 +87,5 @@ One promising direction for more complex movements e.g. sports: combining the ex
 
 
 [Interactive curriculum learning increases and homogenizes motor smoothness](https://www.nature.com/articles/s41598-024-53253-3)
+
+*Published in Scientific Reports 2024. Co-authored with Baptiste Caramiaux, Antoine Loriette and Olivier Sigaud.*

@@ -11,7 +11,7 @@ author_profile: false
     <h1 class="home-hero__name">{{ site.title }}</h1>
     <p class="home-hero__tagline">{{ site.description }}</p>
     <p>
-      Hello, I'm Vaynee. I'm an HCI Researcher with a passion for using data to solve real-world problems and create meaningful impact. With a background in Computer Science and Human-Computer Interaction, I enjoy working at the intersection of AI systems, data and human experience.
+      Hello, I'm Vaynee. I'm a data scientist and HCI Researcher with a passion for solving real-world problems centered around humans and technology to create meaningful impact. With a background in Computer Science and Human-Computer Interaction, I enjoy working at the intersection of AI systems, data and human experience.
     </p>
   </div>
 </div>

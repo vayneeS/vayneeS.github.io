@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "VTOL Flight Summaries"
+title: "3D Flight Summaries"
 excerpt: "Automatically generating cinematic highlight videos of electric aircraft trips using virtual camera control and optimization."
 header:
   teaser: /assets/images/flight_teaser.png
