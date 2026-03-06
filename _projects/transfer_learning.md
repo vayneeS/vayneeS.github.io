@@ -24,6 +24,7 @@ tags:
 
 ## Overview
 
+after my PhD, as part of an endeavour to continue to grow my skills in AI and ML, I enrolled in a bootcamp on deep learning at the [Neuromatch Academy](https://portal.neuromatchacademy.org/). Neuromatch Academy is a volunteer-led organization, run by computational neuroscientist enthusiasts from all over the world. 
 This project investigated four questions about transfer learning — a technique that reuses a model pretrained on one task to accelerate learning on a new, related task. Rather than training a neural network from scratch (which is computationally expensive, time-consuming, and data-hungry), transfer learning transfers the learned parameters of a pretrained network and retrains only a subset of them on the target task.
 
 ---

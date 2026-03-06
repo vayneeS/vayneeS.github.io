@@ -599,11 +599,10 @@ a:hover {
   display: none !important;
 }
 
-/* Make author profile avatar a perfect circle */
 .author__avatar {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
+  border-radius: 30%;
   overflow: hidden;
 }
 
@@ -644,8 +643,8 @@ a:hover {
 .home-hero__avatar {
   width: 140px;
   height: 140px;
-  border-radius: 50%;
-  overflow: hidden;
+  border-radius: 40%;
+  // overflow: hidden;
   flex-shrink: 0;
 }
 
