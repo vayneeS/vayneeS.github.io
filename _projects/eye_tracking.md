@@ -49,6 +49,12 @@ The proof of concept was built as a standalone Java application mimicking a clas
 <!-- - **IR Backend** — Terrier V4.0 with custom Python/Perl snippets generator, returning results in XML -->
 
 ---
+<figure style="width: 50%; margin: 0 auto;">
+ <img src="/assets/images/fixations.png" alt="Interface">
+  <figcaption>Illustration of the interface</figcaption>
+</figure>
+
+---
 
 ## User Study
 
