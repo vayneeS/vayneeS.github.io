@@ -7,13 +7,25 @@ classes: wide project-page
 
 <div class="project-content" markdown="1">
   <p>
-    I am a Human-Centered Data Scientist. Beyond some buzz words, this means that I study how people learn, adapt, and make decisions when working with ML systems. Why does it matter? Automated systems have gaps that need to be addressed if we want to create systems that are not only technically strong, but also consider human issues involved. 
+    I work at the intersection of data, artificial intelligence, and human behavior.
+
+    With a PhD in Human-Computer Interaction, my work focuses on how people learn, adapt, and make decisions when interacting with data-driven and AI systems. Beyond technical performance, I am interested in how these systems are understood, used, and challenged in real-world contexts. 
   </p>
   <p>
-    My previous work ranges from designing adaptive ML systems for motor learning to investigating how domain experts perceive and challenge generative AI — two sides of the same question: whether an AI system performs, but also whether the people it affects can make sense of it.
+    My research spans from designing adaptive systems for motor learning to studying how domain experts interpret and question generative AI. Across these projects, a common thread emerges: evaluating not only whether a system works, but whether it makes sense to the people who use it.
   </p>
   <p>
-    I am currently looking for roles at the intersection of data science, AI evaluation, and behavioral research — in teams that care about building systems that are not just accurate, but meaningful and human-centered.
+   Today, I build on this background to contribute to data analysis, AI evaluation, and problem structuring in applied settings. I am particularly interested in environments where data and AI are used to support decision-making, and where human factors are treated as an integral part of system performance.
+
+
+  <strong>What I focus on</strong>
+  <ul>
+    <li>Structuring complex problems</li>
+    <li>Analyzing data to extract insights</li>
+    <li>Evaluating AI systems in context</li>
+    <li>Bridging data and user understanding</li>
+  </ul>
+
   </p>
 
 ---

@@ -8,11 +8,14 @@ author_profile: false
     <img src="/assets/images/profile.jpg" alt="Vaynee Sungeelee">
   </div>
   <div class="home-hero__content">
-    <h1 class="home-hero__name">{{ site.title }}</h1>
-    <p class="home-hero__tagline">{{ site.description }}</p>
+    <!-- <h1 class="home-hero__name">{{ site.title }}</h1>
+    <p class="home-hero__tagline">{{ site.description }}</p> -->
     <p>
     <div style="max-width: min(50%, 100%);">
-      Hello, I'm Vaynee Sungeelee. I'm a Human-Centered Data Scientist with a passion for solving real-world problems centered around humans and technology to create meaningful impact. With a background in Computer Science and Human-Computer Interaction, I enjoy working at the intersection of AI systems, data and human experience.
+      Hello, I'm <strong>Vaynee Sungeelee</strong>.
+        I work at the intersection of data, AI, and human experience.
+
+        With a background in Computer Science and a PhD in Human-Computer Interaction, I explore how data-driven systems are used, understood, and evaluated in real-world contexts — with a focus on making them more meaningful for decision-making.
     </div>
     </p>
   </div>
