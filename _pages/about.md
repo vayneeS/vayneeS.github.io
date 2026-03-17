@@ -18,7 +18,7 @@ classes: wide project-page
    Today, I build on this background to contribute to data analysis, AI evaluation, and problem structuring in applied settings. I am particularly interested in environments where data and AI are used to support decision-making, and where human factors are treated as an integral part of system performance.
 
 
-  <strong>What I focus on</strong>
+  <p><strong>What I focus on</strong></p>
   <ul>
     <li>Structuring complex problems</li>
     <li>Analyzing data to extract insights</li>
