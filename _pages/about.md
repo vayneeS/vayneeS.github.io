@@ -43,6 +43,6 @@ classes: wide project-page
     Prior to my Master's degree, I worked as a Salesforce consultant at Spoon Consulting in Mauritius, supporting digital transformation for clients like AXA and L'Oréal.
   </p>
 
-[Download my CV](/assets/Vaynee_Sungeelee_CV.pdf)
+[Download my CV](/assets/Vaynee_Sungeelee_CV_Generic.pdf)
 
 </div>
