@@ -7,23 +7,22 @@ classes: wide project-page
 
 <div class="project-content" markdown="1">
   <p>
-    I work at the intersection of data, artificial intelligence, and human behavior.
-
-    With a PhD in Human-Computer Interaction, my work focuses on how people learn, adapt, and make decisions when interacting with data-driven and AI systems. Beyond technical performance, I am interested in how these systems are understood, used, and challenged in real-world contexts. 
+   I work at the intersection of data, artificial intelligence, and human behavior, with a focus on how AI systems support learning and decision-making in education and health contexts. I hold a PhD in Human-Computer Interaction, where I studied how people understand, adapt to, and use data-driven systems in practice.
   </p>
   <p>
-    My research spans from designing adaptive systems for motor learning to studying how domain experts interpret and question generative AI. Across these projects, a common thread emerges: evaluating not only whether a system works, but whether it makes sense to the people who use it.
+    My work spans the design of adaptive systems for motor learning and the evaluation of how experts interpret and question generative AI. Across these projects, I focus on how system outputs are integrated into reasoning and decision processes, beyond technical performance alone.
   </p>
   <p>
-   Today, I build on this background to contribute to data analysis, AI evaluation, and problem structuring in applied settings. I am particularly interested in environments where data and AI are used to support decision-making, and where human factors are treated as an integral part of system performance.
+  I am now applying this perspective to data analysis, AI evaluation, and problem structuring in applied environments. I am particularly interested in systems where human understanding, trust, and decision-making are central to performance.
 
 
   <p><strong>What I focus on</strong></p>
   <ul>
+    <li>Designing interactive AI experiences</li>
     <li>Structuring complex problems</li>
-    <li>Analyzing data to extract insights</li>
-    <li>Evaluating AI systems in context</li>
-    <li>Bridging data and user understanding</li>
+    <li>Analyzing data to inform system behavior and user experience</li>
+    <li>Evaluating human-AI interaction in real-world contexts</li>
+    <li>Designing for understanding, trust, and decision-making</li>
   </ul>
 
   </p>
