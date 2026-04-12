@@ -38,7 +38,7 @@ author_profile: false
     <!-- <img src="/assets/images/eye_tracking_teaser.png" alt="Eye Tracking"> -->
     <div class="project-tile__body">
       <h3>Personalizing Motor Learning with Machine Learning</h3>
-      <p>How a multi-armed bandit algorithm can adapt motor skill training in real time — producing smoother, more expert-like movements than random practice.</p>
+      <p>How a multi-armed bandit algorithm can adapt motor skill training in real time.</p>
     </div>
   </a>
 
@@ -46,7 +46,7 @@ author_profile: false
     <!-- <img src="/assets/images/eye_tracking_teaser.png" alt="Eye Tracking"> -->
     <div class="project-tile__body">
       <h3>Transfer Learning — Group Research Project</h3>
-      <p>Investigating how domain similarity, data requirements, model size, and robustness are affected by transfer learning across three architectures and multiple datasets.</p>
+      <p>Investigating how domain similarity, data requirements, model size, and robustness are affected by transfer learning across architectures and datasets.</p>
     </div>
   </a>
 
