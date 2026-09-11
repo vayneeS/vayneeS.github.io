@@ -7,24 +7,23 @@ classes: wide project-page
 
 <div class="project-content" markdown="1">
   <p>
-   I work at the intersection of artificial intelligence and human behavior, with a focus on how AI systems support learning and decision-making. I hold a PhD in Human-Computer Interaction, where I studied how people understand, adapt to, and use data-driven systems in a motor learning context.
+    I have a background in Computer Science and have worked across both industry and academia.
+    I hold a PhD in Human-Computer Interaction, where I studied how people understand, adapt to, and use AI to guide motor learning. My doctoral work lies at the intersection of artificial intelligence and human behavior, with a focus on how AI systems support learning and decision-making.
   </p>
   <p>
-    My work spans the design of adaptive systems and the evaluation of how experts interpret and question generative AI. Across these projects, I focus on how system outputs are integrated into reasoning and decision processes, beyond technical performance alone.
+    Specifically, my projects have covered the design of adaptive systems for learners as well as the evaluation of how artists question and interpret generative AI. Across these projects, I focused on how system outputs are integrated into reasoning and decision processes, beyond technical performance alone.
   </p>
   <p>
-  I apply this perspective to AI transformation and innovation: structuring business problems, identifying high-value AI use cases, and evaluating their real-world impact. I am especially interested in contexts where human understanding, trust, and decision-making are key to performance.
+  I want to apply this perspective to complex real-world problems, combining data with an understanding of human and business contexts to support informed decisions and meaningful change. I am particularly drawn to environments where technology and data can have a tangible impact.
 
-
-  <p><strong>What I focus on</strong></p>
+  <p><strong>What I'm interested in</strong></p> 
   <ul>
-    <li>Designing controlled experiments to test how people actually behave with AI</li>
-    <li>Structuring ambiguous problems into testable hypotheses</li>
-    <li>Combining behavioural, physiological, and qualitative data to get a fuller picture of an event or pehenomenon</li>
-    <li>Evaluating human-AI interaction outside the lab, where conditions aren't controlled</li>
-    <li>Turning evidence into recommendations that are useful to build technology or inform practices in organisations</li>
+    <li>Understanding client and user needs to uncover pain points and opportunities for business or product improvement</li> 
+    <li>Turning ambiguous business problems into questions that can be investigated with data</li> 
+    <li>Combining quantitative insights with business and user context to understand what is happening and why</li> 
+    <li>Improving how data is collected, structured, and used to support reliable decision-making</li> 
+    <li>Bridging client, business, and technical perspectives to turn evidence into practical solutions</li> 
   </ul>
-  </p>
 
 ---
 
@@ -38,9 +37,9 @@ classes: wide project-page
     My earlier projects include generating optimized  video summaries to highlight key moments in a long video and working with eye-trackers to improve information search when using a search engine screen.
   </p>
   <p>
-    Prior to my starting my Master's degree, I worked as a Salesforce Consultant in Mauritius, supporting clients' (AXA and L'Oréal) digital transformation.
+    Prior to my starting my Master's degree, I worked as a Salesforce Consultant, supporting clients' (AXA and L'Oréal) digital transformation.
   </p>
 
-[Download my CV](/assets/Vaynee_Sungeelee_CV.pdf)
+<!-- [Download my CV](/assets/Vaynee_Sungeelee_CV.pdf) -->
 
 </div>
