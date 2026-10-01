@@ -6,7 +6,7 @@ classes: wide project-page
 ---
 <div class="project-content" markdown="1">
 
-I'm always curious to explore new problems, collaborate on projects that sit at the intersection of AI, data and the human experience. Feel free to reach out.
+I'm always curious to explore new problems and collaborate on projects at the intersection of people and technology. Feel free to reach out.
 
 ---
 

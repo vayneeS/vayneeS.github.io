@@ -12,8 +12,7 @@ author_profile: false
     <p class="home-hero__tagline">{{ site.description }}</p> -->
     <p>
     <div style="max-width: min(50%, 100%);">
-      Hello, I'm <strong>Vaynee Sungeelee</strong>.
-        PhD in Human-Computer Interaction with experience in applied behavioral research and CRM consulting. I use mixed methods and data analysis to understand behaviors, needs and technology use, evaluate interventions, and translate evidence into actionable recommendations. My research has focused particularly on human interaction with AI and adaptive systems, combining experimental, quantitative and qualitative approaches.
+      Hello, I'm Vaynee Sungeelee, a Human-AI Interaction researcher with a PhD in HCI and previous experience in enterprise software consulting. My research examines how people understand and adapt to intelligent systems, particularly AI and adaptive systems. I use mixed methods, combining experimental, quantitative and qualitative approaches, to study human behaviour and translate empirical findings into practical recommendations.
     </div>
     </p>
   </div>
