@@ -654,7 +654,7 @@ a:hover {
   width: 140px;
   height: 140px;
   border-radius: 40%;
-  // overflow: hidden;
+  overflow: hidden;
   flex-shrink: 0;
 }
 
@@ -663,6 +663,8 @@ a:hover {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 22%;
+  transform: scale(1.7);
   display: block;
 }
 
