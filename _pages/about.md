@@ -12,7 +12,7 @@ classes: wide project-page
   <p>
     During my PhD in Human-Computer Interaction at Sorbonne Université, I studied adaptive AI systems for motor learning. My work examined both what these systems enable people to achieve and how people form mental models of their capabilities and predictions. More recently, I have also collaborated on a study about how professional artists integrate and make sense of generative AI in their creative practice.
   </p>
-    <p>
+  <p>
     Across these projects, I have written the code, set up the data pipeline, trained the models and run the analysis, and I used research methods to check whether what I built works for the people using it. What I keep coming back to is the gap between what a system does and what its users think it does, and how that gap shapes the way they use it.
   </p>
   <p>
