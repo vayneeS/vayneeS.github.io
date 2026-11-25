@@ -11,104 +11,111 @@ classes: wide project-page
 
 
 ---
-<div class="project-content" markdown="1">
-*My second PhD study focused on optimizing prosthetic control to explore how an adaptive algorithm affects performance and human agency in human-machine interaction.*
-
+<ddiv class="project-content" markdown="1">
+*My second PhD study: how should a machine-learning prosthetic arm be trained, and does the way it is trained change how well it works and how well its user understands it?*
 [View Code](https://github.com/vayneeS/prosthesis-strategies-with-ml)
-
+ 
 ---
-
+ 
 ## The Problem
-
-Prosthetic arm users struggle to maintain reliable control of their devices. Training strategies directly impact how quickly users learn to translate muscle signals (EMG) into accurate prosthetic movements — but most systems use random, one-size-fits-all approaches that ignore individual learning needs.
-
-**Question:** Can an adaptive training strategy that personalizes gesture selection based on real-time performance help users learn faster and better understand how to train the Machine Learning-based prosthetic arm?
-
+ 
+Some modern prosthetic arms read the electrical activity of the forearm muscles (EMG) and use machine learning to turn it into movements such as closing the hand or rotating the wrist. The user teaches the arm by performing each gesture while the system records the muscle signal.
+ 
+These arms are still rarely used in rehabilitation or sold commercially. One reason is that it is unclear how users should go about training them, so recognition accuracy stays low in everyday life. Muscle signals also drift with tiredness or arm posture, so the arm has to be retrained regularly. A user who understands when the arm is likely to get a gesture right or wrong can work around its mistakes.
+ 
+Most training programmes ask for gestures in a random order. Little is known about whether the order, and who chooses it, makes a difference.
+ 
+**Question:** how does the way gestures are chosen during training (at random, by the user, or by the machine) affect the accuracy of the model and the user's understanding of how it behaves?
+ 
 ---
-
+ 
 ## Approach
-
-To test the adaptive training strategy, I ran a user study with more than 50 participants, comparing it to two other strategies.
-
-- **Random** — gestures presented in random order (baseline)
-- **User-Choice** — users select gestures based on perceived difficulty
-- **Adaptive** — selects gestures based on classifier performance, focusing practice where it matters most
-
+ 
+I ran a lab experiment with 51 able-bodied volunteers. They taught a machine-learning model to recognise 8 hand gestures (such as open hand, close hand, palm up, palm down and pointing) while wearing an EMG armband. After every example, the model was retrained and a prosthetic hand showed the gesture it recognised, so participants got immediate feedback.
+ 
+Each participant was assigned to one of three groups (with roughly equal numbers in each), which differed only in how the next gesture to practise was chosen:
+ 
+- **Random** – the system asks for the gestures in a shuffled order (the baseline).
+- **User** – the participant chooses which gesture to practise next (called *teacher-led* in the paper).
+- **Machine** – the system asks for the gesture the model currently separates least well from the others, so practice goes where it is needed most (called *learner-led* in the paper).
 <figure style="width: 50%; margin: 0 auto;">
  <img src="/assets/images/experiment.png" alt="Experiment setup">
   <figcaption>Participants wore a Myo armband and performed gestures following one of three training strategies</figcaption>
 </figure>
-
+After training, each participant did three more things:
+ 
+1. **A test.** They performed new examples of every gesture, used to measure the model's accuracy.
+2. **A "positives and negatives" task.** They were asked to perform gestures they expected the arm to recognise correctly, and gestures they expected it to get wrong, while explaining their reasoning out loud. This measures how well they understood the model.
+3. **A questionnaire.** They rated how accurately they thought the arm recognised each gesture.
 ---
-
-## Data Pipeline Design
-
-Raw EMG signals from wearable sensors are produced from muscle contractions.
-
-I designed and implemented a data pipeline to turn raw, noisy sensor signals into features for the machine learning algorithm:
-
-1. **Signal cleaning** — removing electrical interference while preserving meaningful muscle activity
-2. **Normalization** — standardizing the 8 sensor channels so each contributed equally, similar to balancing audio inputs so no single signal dominates
-3. **Aggregation** — consolidating high-frequency predictions (200Hz) into one performance score per trial, enabling consistent tracking across 120 training rounds per user
-
-<!-- **Why it matters:** Without proper preprocessing, models risk learning noise instead of real movement patterns. This pipeline improved data quality, ensured fair comparisons across 50+ users with different physiologies and sensor placements, and made performance metrics robust enough for large-scale analysis. -->
-
+ 
+## Data Pipeline
+ 
+I built the pipeline that turns the armband's raw muscle signals into something the model can learn from:
+ 
+1. **Summarising the signal.** The armband has 8 sensors. For each short time window (about 128 ms), I computed the signal's strength (its root mean square) on each sensor. This is a standard summary for this type of classifier, and it makes results comparable with other prosthesis studies.
+2. **One example per gesture.** Each example was about 2 seconds long. I averaged it into a single list of 8 values, one per sensor.
+3. **Tracking progress.** The model was retrained after each example (16 starting examples, then 104 training examples, so 120 in total). After each retraining I measured its accuracy on the test data, which gave a learning curve for every participant.
 ---
-
-## Machine Learning to classify gestures
-
-**The Model:** I implemented Scikit Learn's Linear Discriminant Analysis (LDA) to classify gestures from sensor data. LDA identifies the clearest boundaries between gesture categories by maximizing the separation between them.
-
-The dataset was relatively small (120 training rounds) and the signals were inherently noisy. LDA performs efficiently with limited data and low-dimensional inputs (8 sensor values). Its simplicity reduces the risk of overfitting and keeps the model stable and interpretable.
-
-**The Adaptive Layer:** After each training round, the system analyzes classification errors to identify which gesture pairs are most frequently confused. These gestures are then prioritized in the next round — instead of random repetition, the training loop focuses on the user's specific weak points.
-
+ 
+## The Machine Learning Model
+ 
+I used a Linear Discriminant Analysis (LDA) classifier from Scikit-learn. It is the most commonly used model for recognising muscle signals in realistic conditions, and it can be retrained very quickly, which made it possible to update the model after every single example.
+ 
+**How the Machine group chose gestures:** after each example, I computed for each gesture how well its examples are grouped together compared with how far they sit from the other gestures. The gesture with the lowest score is the one the model is most likely to confuse, so it was requested next. I also made the score account for how many examples each gesture already had, because in a pilot study this strategy otherwise kept asking for the same gestures and left the others with almost no data.
+ 
 ---
-
-## Statistical Analysis: Validating Impact
-
-**The Objective:** Observing different learning curves was not enough — we needed to validate that the performance gaps between training strategies were statistically meaningful, not random variation.
-
-**Learning Speed:** I quantified each participant's improvement rate over time and compared groups using ANOVA. The adaptive strategy produced significantly faster improvement than the other groups — the likelihood that this difference occurred by chance was less than 0.1%, indicating a strong and reliable effect.
-
-**Skill Transfer:** I evaluated whether participants could apply what they learned to reproduce gestures likely to be recognised by the trained classifier — an indicator of true skill acquisition rather than memorization. Because performance scores were not normally distributed, I used a non-parametric test (Kruskal-Wallis). The adaptive group outperformed the user-choice group, with only a 3% probability that this result was due to chance.
-
-**Effect Size:** Beyond statistical significance, effect size quantifies the magnitude of impact.
-
+ 
+## Statistical Analysis
+ 
+The accuracy of the final model was similar in all groups, so I looked at how accuracy changed during training. All tests below are standard comparisons between the three groups.
+ 
+**Gain in accuracy:** the difference between the accuracy of the first model (after the 16 starting examples) and the last one. The groups differed clearly (p < 0.001). The Machine group gained significantly more than the Random group (p < 0.05) and the User group (p < 0.001). The difference between Random and User was borderline (p = 0.053).
+ 
+**Learning rate:** I measured how quickly each participant's model errors fell as examples were added. This is the slope of a line fitted to the logarithm of the error against the logarithm of the number of examples. The slope is negative because errors go down, so a larger absolute value means errors fall faster. The groups differed significantly (p < 0.001). The Machine group's slope was steeper than the User group's (p < 0.001) and the Random group's (p = 0.023).
+ 
+**Understanding of the model:** participants in the User group were the worst at producing gestures the model would recognise correctly, compared with the Machine group (p = 0.039), and the difference with the Random group was borderline (p = 0.061). For gestures the model would get wrong, there was no difference between groups. In the questionnaire, only the Machine group's ratings matched the model's true accuracy per gesture (correlation r = 0.30, p < 0.001); in the other two groups the ratings were not significantly related to the real accuracy.
+ 
 ---
-
+ 
 ## Key Results
+ 
+### 1. All three strategies ended at about the same accuracy
+The final models reached 71% (Random), 66% (User) and 68% (Machine) accuracy on the test, with no significant difference. The strategies differ in how the model got there.
+<figure style="width: 50%; margin: 0 auto;">
+ <img src="/assets/images/trial_accuracy.png" alt="Experiment setup">
+  <figcaption>Participants wore a Myo armband and performed gestures following one of three training strategies</figcaption>
+</figure>
+ 
+### 2. Machine-selected gestures gave the biggest improvement
+Starting from similar accuracy (around 30%), the Machine group gained the most over training. Their error fell faster than in the other two groups, according to the learning-rate measure. The User group started higher (about 38%, not a statistically significant difference) and gained the least.
+<figure style="width: 50%; margin: 0 auto;">
+ <img src="/assets/images/delta_accuracy.png" alt="Experiment setup">
+  <figcaption>Participants wore a Myo armband and performed gestures following one of three training strategies</figcaption>
+</figure>
 
-### 1. Adaptive training reduces time-to-competency
-<!-- 
-![Learning rates by strategy](/assets/images/Learning_rates_by_strategy.png) -->
-*Users exposed to adaptive gesture selection improved significantly faster than those using random or self-directed practice. In practical terms: the adaptive system increases learning speed.*
-
-### 2. Faster learning without sacrificing final performance
-
-<!-- ![Accuracy across trials](/assets/images/accuracy_across_trials_by_strategy.png) -->
-*All groups reached similar peak accuracy by the end of training. The difference lies in speed: users trained with the adaptive strategy achieved proficiency earlier — an efficiency gain with no trade-off in quality.*
-
-### 3. Stronger skill transfer and system understanding
-
-<!-- ![Test accuracy](/assets/images/TPR.png) -->
-*When tested on new movement sequences, users trained using the adaptive strategy performed significantly better than users of the user-choice strategy — indicating deeper skill acquisition and better generalization.*
-
+<figure style="width: 50%; margin: 0 auto;">
+ <img src="/assets/images/learning_rate.png" alt="Experiment setup">
+  <figcaption>Participants wore a Myo armband and performed gestures following one of three training strategies</figcaption>
+</figure>
+ 
+### 3. Machine-selected gestures made participants more consistent
+Participants in all groups became more consistent at performing each gesture over time. This increased the most in the Machine group, where practice was concentrated on the gestures that were hardest to tell apart.
+ 
+### 4. Machine-selected gestures led to a better understanding of the model
+Participants in the Machine group were better at anticipating which of their gestures would be recognised, and were the only group whose rating of the model's accuracy followed its true accuracy.
+ 
 ---
-
-## Key Insights
-
-**Faster onboarding**  
-Adaptive training reduces time-to-competency by focusing practice on gestures the classifier struggles with. This creates steeper learning curves without requiring more total practice time.  
-*Impact: shorter training sessions, lower user frustration, faster clinical deployment.*
-
-**Better mental representation of the system**  
-Users trained adaptively developed stronger mental models — they could predict what the system would do given particular gesture examples.  
-*Impact: improved long-term adherence, reduced support load, higher user confidence.*
-
-**Recommendation**  
-While it doesn't show significant long term benefits in terms of accuracy compared to other techniques, the adaptive strategy shows promising benefits in terms of user adoption.
-Further experiments should collect users' preferences to understand whether one strategy is preferred over another and implications for long-term use. For example, the data shows that  adaptive training would be useful for quick onboarding and clearer understanding. The user could be given more agency after familiarizing with the tool or for those who prefer more control.
+ 
+## Takeaways
+ 
+**Letting the system choose can pay off.** Asking for the gestures the model finds hardest led to a larger accuracy gain, faster error reduction and a clearer picture of the model in the user's mind than random or self-chosen practice, even though final accuracy was the same.
+ 
+**Self-chosen practice was not better.** Letting users choose gave the smallest gain, and the weakest understanding of what the model would recognise. This fits earlier work showing that people are rarely the best teachers of a machine when left alone.
+ 
+**Recommendation.** The strategies each have strengths. The paper suggests sharing the initiative: for example, letting users direct the early part of training and then handing over to machine-selected gestures. Whether users find these strategies engaging, or would stick with them, was not measured and needs further study.
+ 
+**Limits.** Participants were able-bodied volunteers in a single lab session, so the results need to be tested with prosthesis users, over several days and in everyday conditions. The "positives and negatives" task is not a standard way of measuring understanding, and thinking aloud may have made it harder.
 
 
 ## Reference

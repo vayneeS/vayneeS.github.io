@@ -651,8 +651,8 @@ a:hover {
 }
 
 .home-hero__avatar {
-  width: 140px;
-  height: 140px;
+  width: 220px;
+  height: 220px;
   border-radius: 40%;
   overflow: hidden;
   flex-shrink: 0;
@@ -663,8 +663,6 @@ a:hover {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 22%;
-  transform: scale(1.7);
   display: block;
 }
 
@@ -675,7 +673,7 @@ a:hover {
 // }
 
 .home-hero__content {
-  /* remove flex: 1 */
+  flex: 1;
   font-size: 1.02rem;
   line-height: 1.7;
   text-align: justify;
