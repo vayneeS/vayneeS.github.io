@@ -11,8 +11,9 @@ classes: wide project-page
 
 
 ---
-<ddiv class="project-content" markdown="1">
+<div class="project-content" markdown="1">
 *My second PhD study: how should a machine-learning prosthetic arm be trained, and does the way it is trained change how well it works and how well its user understands it?*
+
 [View Code](https://github.com/vayneeS/prosthesis-strategies-with-ml)
  
 ---
@@ -47,6 +48,7 @@ After training, each participant did three more things:
 1. **A test.** They performed new examples of every gesture, used to measure the model's accuracy.
 2. **A "positives and negatives" task.** They were asked to perform gestures they expected the arm to recognise correctly, and gestures they expected it to get wrong, while explaining their reasoning out loud. This measures how well they understood the model.
 3. **A questionnaire.** They rated how accurately they thought the arm recognised each gesture.
+
 ---
  
 ## Data Pipeline
@@ -56,6 +58,7 @@ I built the pipeline that turns the armband's raw muscle signals into something 
 1. **Summarising the signal.** The armband has 8 sensors. For each short time window (about 128 ms), I computed the signal's strength (its root mean square) on each sensor. This is a standard summary for this type of classifier, and it makes results comparable with other prosthesis studies.
 2. **One example per gesture.** Each example was about 2 seconds long. I averaged it into a single list of 8 values, one per sensor.
 3. **Tracking progress.** The model was retrained after each example (16 starting examples, then 104 training examples, so 120 in total). After each retraining I measured its accuracy on the test data, which gave a learning curve for every participant.
+
 ---
  
 ## The Machine Learning Model
@@ -81,23 +84,28 @@ The accuracy of the final model was similar in all groups, so I looked at how ac
 ## Key Results
  
 ### 1. All three strategies ended at about the same accuracy
+
 The final models reached 71% (Random), 66% (User) and 68% (Machine) accuracy on the test, with no significant difference. The strategies differ in how the model got there.
+
 <figure style="width: 50%; margin: 0 auto;">
  <img src="/assets/images/trial_accuracy.png" alt="Experiment setup">
   <figcaption>Participants wore a Myo armband and performed gestures following one of three training strategies</figcaption>
 </figure>
  
 ### 2. Machine-selected gestures gave the biggest improvement
-Starting from similar accuracy (around 30%), the Machine group gained the most over training. Their error fell faster than in the other two groups, according to the learning-rate measure. The User group started higher (about 38%, not a statistically significant difference) and gained the least.
-<figure style="width: 50%; margin: 0 auto;">
- <img src="/assets/images/delta_accuracy.png" alt="Experiment setup">
-  <figcaption>Participants wore a Myo armband and performed gestures following one of three training strategies</figcaption>
-</figure>
 
-<figure style="width: 50%; margin: 0 auto;">
- <img src="/assets/images/learning_rate.png" alt="Experiment setup">
-  <figcaption>Participants wore a Myo armband and performed gestures following one of three training strategies</figcaption>
+Starting from similar accuracy (around 30%), the Machine group gained the most over training. Their error fell faster than in the other two groups, according to the learning-rate measure. The User group started higher (about 38%, not a statistically significant difference) and gained the least.
+
+<div style="display: flex; gap: 1rem; justify-content: center;">
+<figure style="flex: 1; margin: 0;">
+  <img src="/assets/images/delta_accuracy.png" alt="Gain in model accuracy for the Random, User and Machine groups">
+  <figcaption>Gain in accuracy between the first and last model</figcaption>
 </figure>
+<figure style="flex: 1; margin: 0;">
+  <img src="/assets/images/learning_rate.png" alt="Learning rate for the Random, User and Machine groups">
+  <figcaption>Learning rate (more negative means errors fell faster)</figcaption>
+</figure>
+</div>
  
 ### 3. Machine-selected gestures made participants more consistent
 Participants in all groups became more consistent at performing each gesture over time. This increased the most in the Machine group, where practice was concentrated on the gestures that were hardest to tell apart.
